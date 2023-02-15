@@ -1,0 +1,3 @@
+requests
+py3dns
+validate-email-address
