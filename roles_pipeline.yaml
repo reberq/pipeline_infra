@@ -28,6 +28,7 @@ Resources:
                 Resource: "*"
               - Effect: Allow
                 Action:
+                  - codestar-connections:*
                   - cloudformation:*
                   - codebuild:*
                   - codedeploy:*
