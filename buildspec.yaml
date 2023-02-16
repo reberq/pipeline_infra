@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install: #Instalar pynamodb
+    runtime-versions:
+      python: 3.8
+
+  build:
+    commands:
+      - sam build
+      - export BUCKET=aws-sam-cli-managed-default-samclisourcebucket-n1lmldaa3a6q
+      - sam package --s3-bucket $BUCKET --output-template-file template.yaml
+
+artifacts:
+  type: zip
+  files:
+    - template.yaml
